@@ -1,0 +1,7 @@
+{
+  "name": "Comments: Disable Indent",
+  "scope": "comment.block",
+  "settings": {
+    "unIndentedLinePattern": ".+"
+  }
+}

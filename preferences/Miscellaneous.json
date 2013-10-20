@@ -1,0 +1,43 @@
+{
+  "name": "Miscellaneous",
+  "scope": "source",
+  "settings": {
+    "decreaseIndentPattern": "^(.*\\*/)?\\s*\\}[;\\s]*$",
+    "increaseIndentPattern": "^.*(\\{\\}?[^}\"']*|\\([^)\"']*)$",
+    "smartTypingPairs": [
+      [
+        "\"",
+        "\""
+      ],
+      [
+        "(",
+        ")"
+      ],
+      [
+        "{",
+        "}"
+      ],
+      [
+        "[",
+        "]"
+      ],
+      [
+        "“",
+        "”"
+      ],
+      [
+        "‘",
+        "’"
+      ],
+      [
+        "'",
+        "'"
+      ],
+      [
+        "`",
+        "`"
+      ]
+    ],
+    "unIndentedLinePattern": "^\\s*$"
+  }
+}

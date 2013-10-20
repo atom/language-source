@@ -1,0 +1,11 @@
+{
+  "name": "Style: Line Comments - Apostrophe",
+  "scope": "comment.line.apostrophe",
+  "settings": {
+    "indentedSoftWrap": {
+      "format": "${0/(\\s*)(.{,4}).*/$1${2/./ /g}/}",
+      "match": ".*(')\\s+"
+    },
+    "softWrap": true
+  }
+}

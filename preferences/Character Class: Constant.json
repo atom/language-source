@@ -1,0 +1,7 @@
+{
+  "name": "Character Class: Constant",
+  "scope": "constant",
+  "settings": {
+    "characterClass": "constant"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Typing Pairs: String and Comment",
+  "scope": "string.quoted.double - dyn.selection, comment, string.unquoted.heredoc",
+  "settings": {
+    "smartTypingPairs": [
+      [
+        "\"",
+        "\""
+      ],
+      [
+        "(",
+        ")"
+      ],
+      [
+        "{",
+        "}"
+      ],
+      [
+        "[",
+        "]"
+      ],
+      [
+        "“",
+        "”"
+      ],
+      [
+        "‘",
+        "’"
+      ]
+    ]
+  }
+}

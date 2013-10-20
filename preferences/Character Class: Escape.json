@@ -1,0 +1,7 @@
+{
+  "name": "Character Class: Escape",
+  "scope": "constant.character.escape",
+  "settings": {
+    "characterClass": "escape"
+  }
+}

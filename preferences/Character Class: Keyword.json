@@ -1,0 +1,7 @@
+{
+  "name": "Character Class: Keyword",
+  "scope": "keyword",
+  "settings": {
+    "characterClass": "keyword"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Symbol List",
+  "scope": "entity.name.function, entity.name.type, meta.toc-list",
+  "settings": {
+    "showInSymbolList": "1"
+  }
+}

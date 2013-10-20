@@ -1,0 +1,7 @@
+{
+  "name": "Highlight Pairs: Disable in Escaped Characters",
+  "scope": "constant.character.escape",
+  "settings": {
+    "highlightPairs": []
+  }
+}

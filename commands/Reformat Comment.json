@@ -1,0 +1,14 @@
+{
+  "beforeRunningCommand": "nop",
+  "command": "#!/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby\n\n$LOAD_PATH << \"#{ENV[\"TM_SUPPORT_PATH\"]}/lib\"\nrequire \"escape\"\nrequire \"exit_codes\"\n\nctext = STDIN.read\nif ctext =~ /^\\s*(.[^\\s\\w\\\\]*\\s*)/\n  cstring = $1\nelse\n  TextMate.exit_show_tool_tip(\"Unable to determine comment character.\")\nend\n\nflags = %Q{-p \"#{cstring}\"}\nflags += \" --retabify\" unless ENV[\"TM_SOFT_TABS\"] == \"YES\"\nflags += \" -c #{ENV['TM_COLUMNS'].nil? ? 80 : ENV['TM_COLUMNS']}\"\n\ncommand = \"ruby #{e_sh(ENV[\"TM_BUNDLE_SUPPORT\"])}/bin/rubywrap.rb #{flags}\"\ntext    = open(\"| #{command}\", \"r+\") do |wrapper|\n  wrapper << ctext\n  wrapper.close_write\n  wrapper.read\nend\n\nprint e_sn(text)\n",
+  "fallbackInput": "scope",
+  "input": "selection",
+  "inputFormat": "text",
+  "keyEquivalent": "^q",
+  "name": "Reformat Comment",
+  "outputCaret": "afterOutput",
+  "outputFormat": "snippet",
+  "outputLocation": "replaceInput",
+  "scope": "comment.line",
+  "version": 2
+}

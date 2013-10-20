@@ -1,0 +1,10 @@
+{
+  "beforeRunningCommand": "nop",
+  "command": "#!/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby\n\nrequire ENV['TM_SUPPORT_PATH'] + '/lib/exit_codes'\n\n# Test Cases\n# \n# AFooBar -> a_foo_bar -> aFooBar -> AFooBar\n# URLString -> url_string -> urlString -> UrlString\n# TestURLString -> test_url_string -> testUrlString -> TestUrlString\n# test -> Test -> test\n# test_URL_STRING -> testUrlString -> TestUrlString -> test_url_string\n\n\n# HotFlamingCats -> hot_flaming_cats\ndef pascalcase_to_snakecase(word)\n\tword.gsub(/\\B([A-Z])(?=[a-z0-9])|([a-z0-9])([A-Z])/, '\\2_\\+').downcase\nend\n\n# hot_flaming_cats -> hotFlamingCats\ndef snakecase_to_camelcase(word)\n  word.gsub(/_([^_]+)/) { $1.capitalize }\nend\n\n# hotFlamingCats -> HotFlamingCats\ndef camelcase_to_pascalcase(word)\n\tword.gsub(/^\\w{1}/) {|c| c.upcase}\nend\n\nword = $stdin.gets\n\nTextMate.exit_discard if word.nil?\n\nis_pascal = word.match(/^[A-Z]{1}/) ? true : false\nis_snake = word.match(/_/) ? true : false\n\nif is_pascal then\n\tprint pascalcase_to_snakecase(word)\nelsif is_snake then\n\tprint snakecase_to_camelcase(word)\nelse\n\tprint camelcase_to_pascalcase(word) \nend\n",
+  "fallbackInput": "word",
+  "input": "selection",
+  "keyEquivalent": "^_",
+  "name": "Toggle camelCase / snake_case / PascalCase",
+  "output": "replaceSelectedText",
+  "scope": "source"
+}

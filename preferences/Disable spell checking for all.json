@@ -1,0 +1,7 @@
+{
+  "name": "Spell Checking: Disable for Source",
+  "scope": "source, constant, keyword, storage, support, variable",
+  "settings": {
+    "spellChecking": 0
+  }
+}

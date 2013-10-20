@@ -1,0 +1,7 @@
+{
+  "name": "Character Class: Punctuation",
+  "scope": "punctuation.separator",
+  "settings": {
+    "characterClass": "punctuation"
+  }
+}

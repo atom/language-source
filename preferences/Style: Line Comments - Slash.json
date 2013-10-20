@@ -1,0 +1,11 @@
+{
+  "name": "Style: Line Comments - Slash",
+  "scope": "comment.line.slash, comment.line.double-slash",
+  "settings": {
+    "indentedSoftWrap": {
+      "format": "${0/(\\s*)(.{,4}).*/$1${2/./ /g}/}",
+      "match": ".*(//?)\\s+"
+    },
+    "softWrap": true
+  }
+}
