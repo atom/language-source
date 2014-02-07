@@ -1,9 +1,0 @@
-{
-  "beforeRunningCommand": "nop",
-  "command": "#!/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby -wKU\n\ndef tab\n\tENV['TM_SOFT_TABS'] == 'YES' ? ' ' * ENV['TM_TAB_SIZE'].to_i : \"\\t\"\nend\n\ncode = STDIN.read\n\nif code =~ /\\A\\s*\\{\\s*\\n(.*\\n)\\s*\\}\\s*\\z/m then\n  STDOUT << $1.gsub(/^#{tab}/, '')\nelse\n  STDOUT << '}'\nend\n",
-  "input": "selection",
-  "keyEquivalent": "}",
-  "name": "Unwrap Braces",
-  "output": "replaceSelectedText",
-  "scope": "source & dyn.selection & -dyn.caret.mixed"
-}

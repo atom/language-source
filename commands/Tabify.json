@@ -1,8 +1,0 @@
-{
-  "beforeRunningCommand": "saveActiveFile",
-  "command": "#!/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby\n\n# This is a little more convoluted than it needs to be\n# just to ensure that we can do an OK job on really long\n# files.  Frankly, it's probably all for nothing given\n# that we likely have plenty of memory, and that Ruby will\n# probably go an cache a whole chunk of the file somewhere in\n# the IO pipeline anyway - but we like to make the effort.\n\nspacing = nil\nlines = Array.new()\nline = $stdin.gets()\nwhile(line != nil)\n\tlines << line\n\tif(line =~ /^\\t/)  # mixed tabs with spaces, use TM's tab setting\n\t\tspacing = ENV['TM_TAB_SIZE']\n\t\tbreak\n\telsif(line =~ /^[ ]+\\S/)\n\t\tspacing = line[/^([ ]+)\\S/, 1].length\n\t\tbreak\n\tend\n\n\tline = $stdin.gets()\nend\n\nif(spacing != nil)\n\tfp = IO.popen(\"cat \\\"#{ENV['TM_FILEPATH']}\\\" | unexpand -t #{spacing}\", \"r\")\n\tline = fp.gets()\n\twhile(line != nil)\n\t\tprint line\n\t\tline = fp.gets\n\tend\nelse\n\tlines.each() { |line|\n\t\tprint line\n\t}\n\n\tline = $stdin.gets()\n\twhile(line != nil)\n\t\tprint line\n\t\tline = $stdin.gets()\n\tend\nend\n",
-  "input": "document",
-  "keyEquivalent": "^@T",
-  "name": "Convert Spaces to Tabs (Estimating Indent)",
-  "output": "replaceDocument"
-}

@@ -1,9 +1,0 @@
-{
-  "beforeRunningCommand": "nop",
-  "command": "#!/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby -wKU\nrequire ENV['TM_SUPPORT_PATH'] + '/lib/escape.rb'\nrequire ENV['TM_SUPPORT_PATH'] + '/lib/exit_codes.rb'\n\ndef find_markers\n  10.times do |n|\n    start = ENV[\"TM_COMMENT_START#{\"_#{n}\" if n > 0}\"].to_s.strip\n    stop  = ENV[\"TM_COMMENT_END#{\"_#{n}\"   if n > 0}\"].to_s.strip\n    return start, stop if not start.empty? and not stop.empty?\n  end\n  TextMate.exit_show_tool_tip \"No block comment markers found for this language.\"\nend\n\nstart, stop = find_markers\ninput = STDIN.read.to_s\n\nif input =~ /\\n/\n  start << \"\\n\"\n  stop  << \"\\n\"\nend\n\nSTDOUT << e_sn(start) << (input.empty? ? \"\\n\\t$0\\n\" : e_sn(input)) << e_sn(stop)\n",
-  "fallbackInput": "none",
-  "input": "selection",
-  "keyEquivalent": "~@/",
-  "name": "Insert Block Comment",
-  "output": "insertAsSnippet"
-}
