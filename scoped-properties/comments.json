@@ -1,5 +1,5 @@
 {
-  "source": {
+  ".source": {
     "editor": {
       "commentStart": "/*",
       "commentEnd": "*/"
