@@ -1,7 +1,0 @@
-{
-  "name": "Typing Pairs: Disable in Escaped Characters",
-  "scope": "B:constant.character.escape - dyn.selection",
-  "settings": {
-    "smartTypingPairs": []
-  }
-}

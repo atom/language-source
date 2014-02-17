@@ -1,7 +1,0 @@
-{
-  "name": "Indent Corrections: Disable for Comments and Strings",
-  "scope": "comment.block, string.quoted",
-  "settings": {
-    "disableIndentCorrections": true
-  }
-}

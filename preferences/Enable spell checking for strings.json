@@ -1,7 +1,0 @@
-{
-  "name": "Spell Checking: Enable for Strings",
-  "scope": "^ source string.quoted - punctuation",
-  "settings": {
-    "spellChecking": 1
-  }
-}
