@@ -1,7 +1,0 @@
-{
-  "content": "\n\t$0\n",
-  "hideFromUser": true,
-  "keyEquivalent": "\r",
-  "name": "Return Inside Empty Item",
-  "scope": "source & ((L:punctuation.section.*.begin & R:punctuation.section.*.end) | (L:punctuation.definition.*.begin & R:punctuation.definition.*.end)) - string"
-}

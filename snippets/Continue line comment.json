@@ -1,6 +1,0 @@
-{
-  "content": "\n`# extract comment type from the scope name\n# and convert it to the actual character(s)\nCH=$(perl <<<$TM_SCOPE -pe 's/.*\\bcomment\\.line\\.([^. ]*).*/$1/')\ngrep -w ^$CH <<EOF|cut -f2|tr -d \\n\ndouble-slash\t//\ndouble-dash\t--\nnumber-sign\t#\npercentage\t%\nasterisk\t*\nsemicolon\t;\napostrophe\t'\nbacktick\t\\\\\\`\nat-sign\t@\ndouble-backslash\t\\\\\\\\\ndouble-dot\t..\ndouble-number-sign\t##\nexclamation\t!\nslash\t/\nEOF` $0",
-  "keyEquivalent": "\u0003",
-  "name": "Continue Line Comment",
-  "scope": "comment.line"
-}
