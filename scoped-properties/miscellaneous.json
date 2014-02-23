@@ -1,8 +1,0 @@
-{
-  ".source": {
-    "editor": {
-      "increaseIndentPattern": "^.*(\\{\\}?[^}\"']*|\\([^)\"']*)$",
-      "decreaseIndentPattern": "^(.*\\*/)?\\s*\\}[;\\s]*$"
-    }
-  }
-}
