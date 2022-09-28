@@ -1,4 +1,5 @@
-# Source code support in Atom
+##### Atom and all repositories under Atom will be archived on December 15, 2022. Learn more in our [official announcement](https://github.blog/2022-06-08-sunsetting-atom/)
+ # Source code support in Atom
 
 Adds basic comment, indent, and outdent patterns used as a fallback by all
 source files in Atom.
